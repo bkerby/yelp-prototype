@@ -6,6 +6,7 @@
     <script type="text/javascript" src="./source/smart.element.js"></script>
     <script type="text/javascript" src="./source/smart.button.js"></script>
     <script type="text/javascript" src="./source/smart.accordion.js"></script>
+    <script type="text/javascript" src="./source/smart.window.js"></script>
     <script>        window.yPerfTimings = window.yPerfTimings || [];
 
         if (true) {
@@ -9326,9 +9327,9 @@
                                             </div>
                                         </a></div>
                                 </div>
-                                <div class="_1mboc _1piwO _2oFDT">
+                                <div class="_1mboc _1piwO _2oFDT" id="openButton">
                                     <div class="_1mboc _2oFDT"><a class="IEZFH _29943 _2c4MA _1mhJo _1skgq"
-                                            href="./djdugout.page.html" target="" name="" rel="" role="button">
+                                            target="" name="" rel="" role="button">
                                             <div class="_1mboc u-padding-t3 u-padding-b3 _2oFDT _1l506">
                                                 <div class="_1mboc u-space-b2 _2oFDT"><span
                                                         class="_3997G ehCWV icon--24-external-link _1TbF0"
@@ -9355,8 +9356,25 @@
                         <div class="_1mboc _3fs6U u-padding-t2 u-padding-r2 u-padding-b2 u-padding-l2 _2oFDT GVEnp"><a
                                 class="IEZFH _3yl_n _2Gz1l _37m-6"
                                 style="--mousedown-x:0px;--mousedown-y:0px;--button-width:0px"
-                                href="/opportunity/O6Da3fEBZ9Ov2vBgF4lJmg?vertical=food"><span
+                                href=""><span
                                     class="_3997G _2pB8f w_15m _2vkq2 _2gFQ3">Order Takeout or Delivery</span></a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="options">
+                <div class="option">
+                    <smart-button id="openButton">Open/Close</smart-button>
+                </div>
+            </div>
+            <div class="_1mboc _2oFDT">
+                <p class="_3Qnnj _2pB8f _1CQMs _3G312 _2pnx_"><span class="_3997G">Randomizer</span></p>
+                <div class="_1mboc" id="FoodPlatformCTA">
+                    <div class="_1mboc _3b9-s" id="FoodPlatformCTA">
+                        <div class="_1mboc _3fs6U u-padding-t2 u-padding-r2 u-padding-b2 u-padding-l2 _2oFDT GVEnp"><a
+                                class="IEZFH _3yl_n _2Gz1l _37m-6"
+                                style="--mousedown-x:0px;--mousedown-y:0px;--button-width:0px"
+                                ><span
+                                    class="_3997G _2pB8f w_15m _2vkq2 _2gFQ3">Find a Random Resturant</span></a></div>
                     </div>
                 </div>
             </div>
@@ -10834,6 +10852,22 @@
             window.yPerfTimings.push(["body:end", new Date().getTime()]);
         }
     </script>
+
+<template id="footerTemplate">
+    <div style="text-align: end;">
+        <smart-button class="cancel flat">Cancel</smart-button>
+        <smart-button class="agree">Randomize</smart-button>
+    </div>
+</template>
+<smart-window id="formWindow" label="Resturant Randomizer" header-buttons='[]' modal footer-template="footerTemplate">
+    <div id="article">
+        
+    </div>
+</smart-window>
+
+<!-- scripts -->  
+<script type="module" src="./source/modules/smart.window.js"></script>
+<script type="text/javascript" src="./index.js"></script>
 
 </body>
 
